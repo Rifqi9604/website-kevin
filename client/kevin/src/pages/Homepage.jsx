@@ -29,8 +29,12 @@ function Homepage() {
               Photography, and Videography.
             </p>
             <div className="flex gap-4">
-              <SiLinkedin className="text-[28px]  rounded-sm" />
-              <FaInstagram className="text-[28px] rounded-sm" />
+              <a href="https://www.linkedin.com/in/muhammad-kevin-rasendriya-727300240/">
+                <SiLinkedin className="text-[28px]  rounded-sm hover:scale-125 hover:transition-all ease-in-out duration-300" />
+              </a>
+              <a href="https://www.instagram.com/kevinrasendriyaa/">
+                <FaInstagram className="text-[28px] rounded-sm hover:scale-125 hover:transition-all ease-in-out duration-300" />
+              </a>
             </div>
           </div>
         </div>
@@ -86,10 +90,12 @@ function Homepage() {
             </div>
           </div>
           <div className="flex justify-center">
-            <img src={pameran10} className="w-72 h-72 rounded-3xl md:min-w-[390px] md:gap-24" />
+            <img
+              src={pameran10}
+              className="w-72 h-72 rounded-3xl md:min-w-[390px] md:gap-24"
+            />
           </div>
         </div>
-
       </div>
     </div>
   );

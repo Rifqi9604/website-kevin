@@ -15,7 +15,7 @@ function AboutMe() {
 
             <div className='flex flex-col justify-between p-2  gap-2 md:flex-row'>
                 <p className='font-bold text-[18px]'>Education</p>
-                <p className='max-w-[600px] text-[16px] font-medium'>I'm currently in my 3rd year studying Information System in Computer Science Faculty at UPN "Veteran" Jakarta</p>
+                <p className='max-w-[600px] text-[16px] font-medium'>I'm currently in my 2nd year studying Information System in Computer Science Faculty at UPN "Veteran" Jakarta</p>
             </div>
 
             <div className='flex flex-col justify-between p-2  gap-2 md:flex-row'>
