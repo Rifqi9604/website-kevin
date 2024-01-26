@@ -1,8 +1,11 @@
+import { useState } from "react";
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Navbar() {
+  const [clicked, setClicked] = useState(false);
+
   return (
-    <div className="navbar bg-base-100" >
+    <div className="navbar bg-base-100 scroll-smooth">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,21 +29,18 @@ function Navbar() {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <Link to={"/"}>Home</Link>
             </li>
             <li>
               <a>Details</a>
               <ul className="p-2">
                 <li>
-                  <a>About Me</a>
+                  <Link to={"/aboutme"}>About Me</Link>
                 </li>
                 <li>
-                  <a>My Projects</a>
+                  <a href="#projects">My Projects</a>
                 </li>
               </ul>
-            </li>
-            <li>
-              <a>Footer</a>
             </li>
           </ul>
         </div>
@@ -49,28 +49,34 @@ function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             <details>
               <summary>Details</summary>
               <ul className="p-2">
                 <li>
-                  <a>About Me</a>
+                  <Link to={"/aboutme"}>About Me</Link>
                 </li>
                 <li>
-                  <a>My Projects</a>
+                  <a href="#projects">My Projects</a>
                 </li>
               </ul>
             </details>
           </li>
-          <li>
-            <a>Footer</a>
-          </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Login</a>
+        <a className="btn" onClick={() => setClicked(!clicked)}>
+          Contact Me
+        </a>
+        {clicked && (
+          <div className="toast toast-end">
+          <div className="alert alert-success">
+            <span>Feature is on progress!</span>
+          </div>
+        </div>
+        )}
       </div>
     </div>
   );
