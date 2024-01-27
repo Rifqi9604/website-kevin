@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 function Navbar() {
-  const [clicked, setClicked] = useState(false);
+  // const [clicked, setClicked] = useState(false);
 
   return (
     <div className="navbar bg-base-100 scroll-smooth">
@@ -67,16 +67,18 @@ function Navbar() {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn" onClick={() => setClicked(!clicked)}>
-          Contact Me
-        </a>
-        {clicked && (
+        <Link to={"/connect"}>
+          <a className="btn" onClick={() => setClicked(!clicked)}>
+            Contact Me
+          </a>
+        </Link>
+        {/* {clicked && (
           <div className="toast toast-end">
           <div className="alert alert-success">
             <span>Feature is on progress!</span>
           </div>
         </div>
-        )}
+        )} */}
       </div>
     </div>
   );
