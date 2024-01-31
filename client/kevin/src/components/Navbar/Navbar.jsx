@@ -68,7 +68,7 @@ function Navbar() {
       </div>
       <div className="navbar-end">
         <Link to={"/connect"}>
-          <a className="btn bg-[#778da9]" onClick={() => setClicked(!clicked)}>
+          <a className="btn" onClick={() => setClicked(!clicked)}>
             Contact Me
           </a>
         </Link>
