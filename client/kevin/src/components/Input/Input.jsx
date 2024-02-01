@@ -1,18 +1,22 @@
+// Input.js
+
 import React from "react";
 
-export const Input = (props) => {
-  const { label, onChange, name, type, value, error } = props;
+const Input = ({ label, name, type, value, onChange, error }) => {
   return (
-    <>
-      <label className="text-[12px] font-bold pb-2">{label}</label>
+    <div>
+      <label className="font-semibold">{label}</label>
       <input
-        onChange={onChange}
-        name={name}
         type={type}
+        placeholder={`Type here`}
+        className="input input-bordered input-primary w-full max-w-sm"
+        name={name}
         value={value}
-        className="w-[236px] h-[35px] border-slate-600 rounded-[4px] px-2 py-2  border-[1px]"
+        onChange={onChange}
       />
-      {error && <p className="text-red-500 text-[12px]">{error}</p>}
-    </>
+      {error && <p className="text-red-500">{error}</p>}
+    </div>
   );
 };
+
+export default Input;
