@@ -2,9 +2,10 @@
 
 import React from "react";
 
-const Input = ({ label, name, type, value, onChange, error }) => {
+const Input = (props) => {
+  const { label, name, type, value, onChange, error } = props;
   return (
-    <div>
+    <div className="flex flex-col gap-4">
       <label className="font-semibold">{label}</label>
       <input
         type={type}
