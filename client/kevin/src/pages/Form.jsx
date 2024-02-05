@@ -16,7 +16,7 @@ function Form() {
       message: formik.values.message,
     };
 
-    fetch("/connect", {
+    fetch("/api/connect", {
       method: "post",
       headers: {
         "Content-type": "application/json",
