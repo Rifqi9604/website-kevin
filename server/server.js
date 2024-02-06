@@ -18,7 +18,7 @@ app.get("/connect", (req, res) => {
     }
     // console.log(fields)
   });
-});
+});z
 
 app.post("/connect", (req, res) => {
     const { fullName, shortName, phoneNumber, message } = req.body;
