@@ -3,12 +3,12 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://website-kevin-server.vercel.app/:1"
+      "destination": "https://website-kevin-server.vercel.app/$1"
     },
     {
       "source": "/(.*)",
       "destination": "/index.html"
-      
+
     }
   ]
 }
