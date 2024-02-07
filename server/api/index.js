@@ -10,10 +10,11 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.get("/connect", (req, res) => {
-  const sql = "SELECT * FROM website_kevin";
+  const sql = "SELECT * FROM frienddatas";
   db.query(sql, (err, fields) => {
+    console.log(fields)
     if (err) response(500, "invalid", "error", res);
-    if (fields?.id) {
+    if (res.statusCode === 200) {
       response(200, fields, "Data found", res);
     }
     // console.log(fields)
