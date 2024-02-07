@@ -2,9 +2,9 @@ const bodyParser = require("body-parser");
 const express = require("express");
 const cors = require("cors");  // Import the cors middleware
 const app = express();
-const db = require("./connection");
+const db = require("../connection");
 const port = 5000;
-const response = require("./response");// Import the cors middleware
+const response = require("../response");// Import the cors middleware
 
 app.use(bodyParser.json());
 app.use(cors());
