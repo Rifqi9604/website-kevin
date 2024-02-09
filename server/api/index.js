@@ -26,6 +26,7 @@ app.post("/connect", (req, res) => {
     const sql = `INSERT INTO frienddatas (full_name, short_name, phone_number, message) VALUES ('${fullName}', '${shortName}', '${phoneNumber}','${message}')`;
   
     db.query(sql, [fullName, shortName, phoneNumber, message], (err, result) => {
+      console.log(req.body)
       if (err) {
         console.error("Error in database query:", err);
         return response(500, "error", "Internal Server Error", res);
